@@ -21,6 +21,10 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+# Drupal sandboxen
+alias d7="z drupal7"
+alias d8="z drupal8"
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
