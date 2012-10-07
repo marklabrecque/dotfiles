@@ -13,6 +13,8 @@
 	c = clone --recursive
 	# Commit all changes
 	ca = !git add -A && git commit -av
+	# Checkout
+	co = checkout
 	# Switch to a branch, creating it if necessary
 	go = checkout -B
 	# Show verbose output about tags, branches or remotes
@@ -34,8 +36,6 @@
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
-	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
-	whitespace = space-before-tab,indent-with-non-tab,trailing-space
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -56,6 +56,8 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	# Use FileMerge as default mergetool.
+	tool = opendiff
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
@@ -75,3 +77,7 @@
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+
+[branch]
+	# Always rebase with git pull. git pull --no-rebase to override.
+	autosetuprebase = always
