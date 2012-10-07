@@ -12,3 +12,14 @@ Thumbs.db
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+
+# Below from http://drupal.org/node/1542048
+# Patch/diff artifacts.
+*.patch
+*.diff
+*.orig
+*.rej
+interdiff*.txt
+
+# Ignore certain Drupal modules.
+search_krumo
