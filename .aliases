@@ -43,6 +43,10 @@ alias gai='git apply --index'
 alias gundo='git reset --soft HEAD^'
 alias grepcommit='git log --pretty=oneline | grep'
 
+# Drush aliases - look at http://drush.ws/examples/example.bashrc instead?
+alias dcc='drush cc all'
+alias ddl='drush dl'
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
