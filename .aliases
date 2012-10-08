@@ -25,6 +25,24 @@ alias oo="open ."
 alias d7="z drupal7"
 alias d8="z drupal8"
 
+# Git aliases
+alias gba='git branch -a'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gd='git diff | $EDITOR'
+alias gds='git diff --staged | $EDITOR'
+alias gl='git pull'
+alias gp='git push'
+alias gfp='git ftp push'
+alias gpa='git ftp push; git push'
+alias glog='git log'
+alias gst='git status'
+alias ga='git add -i'
+alias gav='git apply -v'
+alias gai='git apply --index'
+alias gundo='git reset --soft HEAD^'
+alias grepcommit='git log --pretty=oneline | grep'
+
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
