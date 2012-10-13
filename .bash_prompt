@@ -43,16 +43,3 @@ function fmt_time () {
 function pwdtail () {
     pwd|awk -F/ '{nlast = NF -1;print $nlast"/"$NF}'
 }
-
-# Gets the current 1m avg CPU load
-function chkload () {
-    local CURRLOAD=`uptime|awk '{print $8}'`
-    if [ "$CURRLOAD" > "1" ]; then
-        local OUTP="HIGH"
-    elif [ "$CURRLOAD" < "1" ]; then
-        local OUTP="NORMAL"
-    else
-        local OUTP="UNKNOWN"
-    fi
-    echo $CURRLOAD
-}
