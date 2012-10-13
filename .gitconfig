@@ -36,6 +36,9 @@
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
+	# Always use Unix line endings in checked out files
+	autocrlf = false
+	safecrlf = false
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
