@@ -27,8 +27,6 @@ Includes a slightly tweaked version of the [useful and good-looking prompt](http
 
 Adds a bunch of git and drush aliases. Some of these are muscle memory, some will eventually be removed because I never use them.
 
----
-
 ## Installation
 
 ### Using Git and the bootstrap script
