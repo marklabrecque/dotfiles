@@ -25,6 +25,9 @@ alias oo="open ."
 alias d7="z drupal7"
 alias d8="z drupal8"
 
+# Log files
+alias phplog='tail -f /Applications/MAMP/logs/php_error.log'
+
 # Git aliases
 alias gba='git branch -a'
 alias gc='git commit -v'
