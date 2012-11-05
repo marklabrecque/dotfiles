@@ -34,19 +34,19 @@ Adds a bunch of git and drush aliases. Some of these are muscle memory, some wil
 You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
-git clone --recursive https://github.com/Cottser/dotfiles.git && cd dotfiles && ./bootstrap.sh
+git clone --recursive https://github.com/Cottser/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
 
 ```bash
-./bootstrap.sh
+source bootstrap.sh
 ```
 
 Alternatively, to update while avoiding the confirmation prompt:
 
 ```bash
-./bootstrap.sh -f
+set -- -f; source bootstrap.sh
 ```
 
 ### Git-free install
