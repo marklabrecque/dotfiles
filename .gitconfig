@@ -84,6 +84,8 @@
 [branch]
 	# Always rebase with git pull. git pull --no-rebase to override.
 	autosetuprebase = always
+[push]
+	default = simple
 
 # Kaleidoscope.app as difftool and mergetool.
 [difftool "Kaleidoscope"]
