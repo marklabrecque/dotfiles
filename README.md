@@ -53,7 +53,7 @@ set -- -f; source bootstrap.sh
 
 ### Git-free install
 
-To install these dotfiles without Git:
+To install these dotfiles without Git (you won't get Drush though):
 
 ```bash
 cd; curl -#L https://github.com/Cottser/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh}
