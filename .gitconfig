@@ -37,7 +37,7 @@
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
 	# Always use Unix line endings in checked out files
-	autocrlf = false
+	autocrlf = input
 	safecrlf = false
 
 [color]
