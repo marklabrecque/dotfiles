@@ -6,11 +6,13 @@ Mathias Bynens’ dotfiles with some personal tweaks.
 
 ### Drush
 
-This repository includes Drush as a git subtree. If you have git-subtree (and if you use the git that comes with homebrew you do!) then you can easily update Drush: `cd` into your local `dotfiles` repository and run:
+This repository includes Drush (latest dev version) as a git submodule. To update Drush, `cd` into your local `dotfiles` repository and run:
 
 ```bash
 ./drushup.sh
 ```
+
+Then commit the changes (if any).
 
 ### Brett Terpstra-esque bash prompt
 
