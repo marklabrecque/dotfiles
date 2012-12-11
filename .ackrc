@@ -1,0 +1,2 @@
+# Drupal file types
+--type-set=drupal=.php,.inc,.module,.install,.info,.engine,.test
