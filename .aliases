@@ -9,7 +9,7 @@ alias -- -="cd -"
 # Shortcuts
 alias in="cd ~/Inbox"
 alias out="cd ~/Outbox"
-alias d="cd ~/Dropbox"
+alias db="cd ~/Dropbox"
 alias p="cd ~/Projects"
 alias ws="cd ~/WebServer"
 alias g="git"
