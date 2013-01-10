@@ -1,6 +1,8 @@
 #!/bin/bash
 cd "$(dirname "${BASH_SOURCE}")"
 git pull
+echo "Checking for newer version of Drush in source repository…"
+git submodule update
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "drushup.sh" --exclude ".gitmodules" --exclude "README.md" -av . ~
 }
