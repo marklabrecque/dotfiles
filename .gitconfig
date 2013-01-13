@@ -43,6 +43,10 @@
 	autocrlf = input
 	safecrlf = false
 
+[help]
+	# Automatically correct typos after 3 seconds (30 deciseconds)
+	autocorrect = 30
+
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
 	ui = auto
