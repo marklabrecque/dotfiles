@@ -50,7 +50,6 @@ alias grepcommit='git log --pretty=oneline | grep'
 alias d='drush'
 alias dy='drush -y'
 alias dcc='drush cc all'
-alias ddl='drush dl'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
