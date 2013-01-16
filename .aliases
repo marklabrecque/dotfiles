@@ -48,6 +48,7 @@ alias grepcommit='git log --pretty=oneline | grep'
 
 # Drush aliases - look at http://drush.ws/examples/example.bashrc instead?
 alias d='drush'
+alias dy='drush -y'
 alias dcc='drush cc all'
 alias ddl='drush dl'
 
