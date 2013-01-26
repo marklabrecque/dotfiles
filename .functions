@@ -145,3 +145,11 @@ function unquarantine() {
 		xattr -r -d "$attribute" "$@"
 	done
 }
+
+# Generate a link to drupalcode.org for the most recent commit.
+function dhash() {
+	hash=$(git rev-parse --short HEAD)
+	# http://stackoverflow.com/questions/8190392/is-there-a-git-command-that-returns-the-current-project-name
+	project=$(git remote -v | head -n1 | awk '{print $2}' | sed 's/.*\///' | sed 's/\.git//')
+	echo "<a href=\"http://drupalcode.org/project/$project.git/commit/$hash\">$hash</a>" | pbcopy
+}
