@@ -23,3 +23,6 @@ interdiff*.txt
 
 # Ignore certain Drupal modules.
 search_krumo
+
+# Ignore logs from git-ftp.
+.git-ftp.log
