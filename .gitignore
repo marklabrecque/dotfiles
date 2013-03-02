@@ -26,3 +26,6 @@ search_krumo
 
 # Ignore logs from git-ftp.
 .git-ftp.log
+
+# Sass cache files.
+.sass-cache
