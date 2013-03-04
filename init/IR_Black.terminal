@@ -143,6 +143,8 @@
 	b3KiEhRYTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRFxhUcm9vdIABCBEaIy0yNztB
 	SE5bYnZ4en+Kk5uep7m8wQAAAAAAAAEBAAAAAAAAABkAAAAAAAAAAAAAAAAAAADD
 	</data>
+	<key>BackgroundBlur</key>
+	<real>0.082911849710982657</real>
 	<key>BackgroundColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -180,6 +182,8 @@
 	AAAAAAAAyg==
 	</data>
 	<key>FontAntialias</key>
+	<true/>
+	<key>Linewrap</key>
 	<true/>
 	<key>ProfileCurrentVersion</key>
 	<real>2.02</real>
