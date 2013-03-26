@@ -29,3 +29,6 @@ search_krumo
 
 # Sass cache files.
 .sass-cache
+
+# Drupal development modules symlinked into every local install.
+_dev_modules
