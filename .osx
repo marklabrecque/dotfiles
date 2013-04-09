@@ -489,6 +489,9 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*" "http://drupalcode.org/*" "http://drupal.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*" "http://drupalcode.org/*" "http://drupal.org/*"
 
+# Disable two-finger back/forward gesture (I trigger it accidentally way too often)
+defaults write com.google.Chrome.plist AppleEnableSwipeNavigateWithScrolls -bool FALSE
+
 ###############################################################################
 # Kill affected applications                                                  #
 ###############################################################################
