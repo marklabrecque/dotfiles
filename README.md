@@ -1,6 +1,6 @@
 # joelpittet’s dotfiles
 
-Mathias Bynens’ dotfiles with some personal tweaks.
+Mathias Bynens’ dotfiles with Cottsers' tweaks and some personal tweaks.
 
 ## Notable features
 
