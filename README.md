@@ -1,4 +1,4 @@
-# Cottser’s dotfiles
+# joelpittet’s dotfiles
 
 Mathias Bynens’ dotfiles with some personal tweaks.
 
@@ -36,7 +36,7 @@ Adds a bunch of git and drush aliases. Some of these are muscle memory, some wil
 You can clone the repository wherever you want. (I like to keep it in `~/dotfiles`.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
 ```bash
-git clone --recursive https://github.com/Cottser/dotfiles.git && cd dotfiles && source bootstrap.sh
+git clone --recursive https://github.com/joelpittet/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
@@ -56,7 +56,7 @@ set -- -f; source bootstrap.sh
 To install these dotfiles without Git (you won't get Drush though):
 
 ```bash
-cd; curl -#L https://github.com/Cottser/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,drushup.sh,.gitmodules}
+cd; curl -#L https://github.com/joelpittet/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,drushup.sh,.gitmodules}
 ```
 
 To update later on, just run that command again.
@@ -79,15 +79,15 @@ My `~/.extra` looks something like this:
 
 ```bash
 # Git credentials
-GIT_AUTHOR_NAME="Scott Reeves"
+GIT_AUTHOR_NAME="Joel Pittet"
 GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
 git config --global user.name "$GIT_AUTHOR_NAME"
-GIT_AUTHOR_EMAIL="scott@example.com"
+GIT_AUTHOR_EMAIL="joel@pittet.ca"
 GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
 git config --global user.email "$GIT_AUTHOR_EMAIL"
 ```
 
-You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/Cottser/dotfiles/fork_select) instead, though. Or better yet, [fork Mathias’](https://github.com/mathiasbynens/dotfiles/fork_select)!
+You could also use `~/.extra` to override settings, functions and aliases from my dotfiles repository. It’s probably better to [fork this repository](https://github.com/joelpittet/dotfiles/fork_select) instead, though. Or better yet, [fork Mathias’](https://github.com/mathiasbynens/dotfiles/fork_select)!
 
 ### Sensible OS X defaults
 
@@ -107,7 +107,7 @@ When setting up a new Mac, you may want to install some common Homebrew formulae
 
 ## Feedback
 
-[Ping me on Twitter](http://twitter.com/Cottser).
+[Ping me on Twitter](http://twitter.com/joelpittet).
 
 ## Thanks to…
 
