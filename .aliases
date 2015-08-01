@@ -3,8 +3,9 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
+alias ......="cd ../../../../.."
+alias .......="cd ../../../../../.."
+alias ........="cd ../../../../../../.."
 
 # Shortcuts
 alias in="cd ~/Inbox"
@@ -16,7 +17,7 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 alias v="vim"
-alias m="mate ."
+#alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
@@ -24,9 +25,10 @@ alias oo="open ."
 # Drupal sandboxen
 alias d7="z drupal7"
 alias d8="z drupal8"
+alias drupalcs="phpcs --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,js,css,info,txt'"
 
 # Log files
-alias phplog='tail -f /Applications/MAMP/logs/php_error.log'
+#alias phplog='tail -f /Applications/MAMP/logs/php_error.log'
 
 # Git aliases
 alias gba='git branch -a'
@@ -45,6 +47,29 @@ alias gav='git apply -v'
 alias gai='git apply --index'
 alias gundo='git reset --soft HEAD^'
 alias grepcommit='git log --pretty=oneline | grep'
+alias gti='echo "FIX YOUR SELF BEFORE YOU WRECK YOURSELF" && git'
+
+# Patch shortcuts
+#
+# Copy a patch URL to the clipboard, then run one of these commands to download
+# the patch and apply it. Hat tip to @chrisjlee for making me reconsider curl.
+#
+# Apply
+alias cap='curl `pbpaste` | git apply -v'
+# Apply and stage
+alias cape='curl `pbpaste` | git apply -v --index'
+# Apply with `patch`
+alias capp='curl `pbpaste` | patch -p1'
+# Reverse apply
+alias carp='curl `pbpaste` | git apply -Rv'
+# Reverse apply and stage
+alias carpe='curl `pbpaste` | git apply -Rv --index'
+# Verify patch
+alias cav='curl `pbpaste` | git apply -v --check'
+# Verify patch with `patch`
+alias capv='curl `pbpaste` | patch -p1 --dry-run'
+# Patch all files.
+alias pa='cat *.patch | patch -p1'
 
 # Drush aliases - look at http://drush.ws/examples/example.bashrc instead?
 alias d='drush'
@@ -52,13 +77,18 @@ alias dy='drush -y'
 alias dcc='drush cc all'
 
 # Default Tower to open in 'Status' view.
-alias gittower='gittower -s '
+#alias gittower='gittower -s '
+
+alias xddis='mv /usr/local/etc/php/5.5/conf.d/ext-xdebug.ini /usr/local/etc/php/5.5/conf.d/ext-xdebug.ini.dis && sudo apachectl restart'
+alias xden='mv /usr/local/etc/php/5.5/conf.d/ext-xdebug.ini.dis /usr/local/etc/php/5.5/conf.d/ext-xdebug.ini && sudo apachectl restart'
+alias xhdis='mv /usr/local/etc/php/5.5/conf.d/ext-xhprof.ini /usr/local/etc/php/5.5/conf.d/ext-xhprof.ini.dis && sudo apachectl restart'
+alias xhen='mv /usr/local/etc/php/5.5/conf.d/ext-xhprof.ini.dis /usr/local/etc/php/5.5/conf.d/ext-xhprof.ini && sudo apachectl restart'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-	colorflag="--color"
+  colorflag="--color"
 else # OS X `ls`
-	colorflag="-G"
+  colorflag="-G"
 fi
 
 # List all files colorized in long format
@@ -66,6 +96,7 @@ alias l="ls -l ${colorflag}"
 
 # List all files colorized in long format, including dot files
 alias la="ls -la ${colorflag}"
+alias ll="la"
 
 # List only directories
 alias lsd='ls -l ${colorflag} | grep "^d"'
@@ -81,7 +112,7 @@ alias sudo='sudo '
 alias gurl="curl --compressed"
 
 # Get OS X Software Updates, and update installed Ruby gems, Homebrew, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo gem update'
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; sudo gem update; composer selfupdate'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -98,7 +129,7 @@ alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+#alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Canonical hex dump; some systems have this symlinked
@@ -157,10 +188,15 @@ alias map="xargs -n1"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
-	alias "$method"="lwp-request -m '$method'"
+  alias "$method"="lwp-request -m '$method'"
 done
 
+# IOS SIMULATOR
+alias ios='open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app/'
+
 # Stuff I never really use but cannot delete either because of http://xkcd.com/530/
-alias stfu="osascript -e 'set volume output muted true'"
-alias pumpitup="osascript -e 'set volume 7'"
-alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+alias stfu="osascript -e 'set volume output muted true' && echo 'shhh! I am trying to sleep!'"
+alias pumpitup="osascript -e 'set volume 7' && echo 'Dialed to 11!'"
+
+# SASS
+alias watch="bundle exec compass watch"
