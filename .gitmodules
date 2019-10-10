@@ -1,3 +1,0 @@
-[submodule "bin/extras/drush"]
-	path = bin/extras/drush
-	url = http://git.drupal.org/project/drush.git
